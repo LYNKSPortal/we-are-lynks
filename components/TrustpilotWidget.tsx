@@ -74,7 +74,7 @@ export default function TrustpilotWidget({
             {Array.from({ length: 5 }).map((_, i) => (
               <Star
                 key={i}
-                className="w-5 h-5 fill-[#00b67a] text-[#00b67a]"
+                className="w-5 h-5 fill-[#dbf72c] text-[#dbf72c]"
               />
             ))}
           </div>
