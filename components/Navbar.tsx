@@ -29,10 +29,10 @@ export default function Navbar() {
         <div className="flex items-center h-auto py-6">
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo-light-version.png"
+              src="/new-logo.png"
               alt="LYNKS Logo"
-              width={300}
-              height={100}
+              width={3000}
+              height={825}
               priority
               className="h-auto w-[300px]"
             />

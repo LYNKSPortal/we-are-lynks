@@ -46,10 +46,10 @@ export default function Footer() {
           <div>
             <div className="mb-4 flex justify-center">
               <Image
-                src="/logo-light-version.png"
+                src="/new-logo.png"
                 alt="LYNKS Logo"
-                width={300}
-                height={100}
+                width={3000}
+                height={825}
                 className="h-auto w-[300px]"
               />
             </div>
