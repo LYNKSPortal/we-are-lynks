@@ -75,11 +75,6 @@ export default function TrustpilotWidget({
               <p className="text-gray-300 leading-relaxed whitespace-pre-line">
                 {review.body}
               </p>
-
-              <div className="mt-6 flex items-center gap-6 text-sm text-gray-400">
-                <span>Useful</span>
-                <span>Share</span>
-              </div>
             </div>
           ))}
         </div>
