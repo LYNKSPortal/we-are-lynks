@@ -55,8 +55,8 @@ export default function TrustpilotWidget({
     function ReviewCard({ review }: { review: typeof reviews[number] }) {
       const [expanded, setExpanded] = useState(false);
       const wordCount = review.body.trim().split(/\s+/).length;
-      const isLong = wordCount > 100;
-      const displayText = expanded || !isLong ? review.body : truncateWords(review.body, 100);
+      const isLong = wordCount > 50;
+      const displayText = expanded || !isLong ? review.body : truncateWords(review.body, 50);
 
       return (
         <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-lg flex flex-col">
