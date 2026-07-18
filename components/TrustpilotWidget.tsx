@@ -126,7 +126,7 @@ export default function TrustpilotWidget({
             View on Trustpilot
           </a>
           <Image
-            src="/trust-pilot-logo.png"
+            src="/trust-pilot-neon-logo.png"
             alt="Trustpilot"
             width={1000}
             height={246}
