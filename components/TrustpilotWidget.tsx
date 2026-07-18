@@ -47,7 +47,7 @@ export default function TrustpilotWidget({
       {
         initials: 'KQ',
         name: 'Kevin Quirk',
-        meta: 'GB • 1 review • May 30, 2026',
+        meta: '(AI Brdige Solutions)',
         title: 'Outstanding Experience from Start to Finish',
         body: 'Working with Lynks has been one of the best decisions we’ve made for our business. From the beginning, the team took the time to understand our goals, challenges, and vision, and they went above and beyond to support us every step of the way.\n\nTheir professionalism, communication, and dedication have been exceptional, and they have genuinely made a positive impact on our business growth and operations. Nothing ever felt like too much trouble, and their expertise and guidance gave us confidence throughout the process.\n\nIf you’re looking for a company that truly cares about its clients and delivers real value, I would highly recommend them. Thank you to the whole team for everything you’ve done for us.',
       },
