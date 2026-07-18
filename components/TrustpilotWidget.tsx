@@ -40,7 +40,7 @@ export default function TrustpilotWidget({
       {
         initials: 'DL',
         name: 'Deborah Leece',
-        meta: 'IM • 2 reviews • May 29, 2026',
+        meta: '(Coached By Debs)',
         title: 'I can’t recommend these guys highly enough…',
         body: `I can’t recommend these guys highly enough. They have been absolutely amazing in helping me set up my coaching business, supporting me with everything from website and IT issues to marketing and all the countless little things that come with starting a business.\n\nTheir knowledge, patience, and willingness to go above and beyond have made such a difference. Nothing is ever too much trouble, and they always find a solution while making everything easy to understand.\n\nNot only are they incredibly skilled, but they’re also genuinely supportive and invested in helping others succeed. I’m so grateful for all their help and would highly recommend them to anyone looking for someone reliable, knowledgeable, and a pleasure to work with.`,
       },
