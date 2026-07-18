@@ -44,6 +44,13 @@ export default function TrustpilotWidget({
         title: 'I can’t recommend these guys highly enough…',
         body: `I can’t recommend these guys highly enough. They have been absolutely amazing in helping me set up my coaching business, supporting me with everything from website and IT issues to marketing and all the countless little things that come with starting a business.\n\nTheir knowledge, patience, and willingness to go above and beyond have made such a difference. Nothing is ever too much trouble, and they always find a solution while making everything easy to understand.\n\nNot only are they incredibly skilled, but they’re also genuinely supportive and invested in helping others succeed. I’m so grateful for all their help and would highly recommend them to anyone looking for someone reliable, knowledgeable, and a pleasure to work with.`,
       },
+      {
+        initials: 'KQ',
+        name: 'Kevin Quirk',
+        meta: 'GB • 1 review • May 30, 2026',
+        title: 'Outstanding Experience from Start to Finish',
+        body: 'Working with Lynks has been one of the best decisions we’ve made for our business. From the beginning, the team took the time to understand our goals, challenges, and vision, and they went above and beyond to support us every step of the way.\n\nTheir professionalism, communication, and dedication have been exceptional, and they have genuinely made a positive impact on our business growth and operations. Nothing ever felt like too much trouble, and their expertise and guidance gave us confidence throughout the process.\n\nIf you’re looking for a company that truly cares about its clients and delivers real value, I would highly recommend them. Thank you to the whole team for everything you’ve done for us.',
+      },
     ];
 
     function truncateWords(text: string, maxWords: number) {
@@ -102,7 +109,7 @@ export default function TrustpilotWidget({
 
     return (
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} />
           ))}
