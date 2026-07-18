@@ -125,7 +125,7 @@ export default function Quote() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-800 text-white focus:ring-2 focus:ring-[#dbf72c] focus:border-transparent transition-all"
-                    placeholder="+1 (234) 567-890"
+                    placeholder="+44 7624 000000"
                   />
                 </div>
 

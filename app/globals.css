@@ -12,6 +12,7 @@
   --color-accent: var(--accent);
   --font-sans: var(--font-instrument-sans);
   --font-display: var(--font-syne);
+  --breakpoint-nav: 1320px;
 }
 
 body {
@@ -81,4 +82,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-card-title {
   margin-bottom: 0px !important;
+}
+
+@media (min-width: 1320px) {
+  .nav\:flex {
+    display: flex !important;
+  }
+  
+  .nav\:hidden {
+    display: none !important;
+  }
 }

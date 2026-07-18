@@ -19,8 +19,9 @@ export const authOptions: NextAuthOptions = {
         const adminUsername = process.env.ADMIN_USERNAME;
         const adminPasswordHashRaw = process.env.ADMIN_PASSWORD_HASH;
         
-        // Reconstruct the full bcrypt hash (stored without $ to avoid env var parsing issues)
-        const adminPasswordHash = adminPasswordHashRaw ? `$${adminPasswordHashRaw.slice(0, 2)}$${adminPasswordHashRaw.slice(2, 4)}$${adminPasswordHashRaw.slice(4)}` : null;
+        // Normalize and reconstruct the full bcrypt hash (allows the env var to include or omit $ signs)
+        const normalizedHash = adminPasswordHashRaw ? adminPasswordHashRaw.replace(/\$/g, '') : '';
+        const adminPasswordHash = normalizedHash ? `$${normalizedHash.slice(0, 2)}$${normalizedHash.slice(2, 4)}$${normalizedHash.slice(4)}` : null;
 
         console.log('Auth attempt:', {
           providedUsername: credentials.username,

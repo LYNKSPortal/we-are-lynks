@@ -38,7 +38,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8 flex-1 justify-center">
+          <div className="hidden nav:flex items-center space-x-8 flex-1 justify-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -51,7 +51,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden nav:flex items-center gap-4">
             <Link
               href="https://wa.me/447624000000"
               target="_blank"
@@ -74,22 +74,31 @@ export default function Navbar() {
           </div>
 
           <button
-            className="md:hidden text-white ml-auto"
+            className="nav:hidden text-white ml-auto flex items-center gap-2"
             onClick={() => setIsOpen(!isOpen)}
           >
+            <span className="font-medium">Menu</span>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-[#0c0f17] border-t border-gray-800">
-          <div className="px-4 py-4 space-y-3">
+        <div className="nav:hidden fixed inset-0 bg-[#0c0f17] z-50 flex flex-col items-center justify-center">
+          <button
+            className="absolute top-8 right-8 text-white flex items-center gap-2"
+            onClick={() => setIsOpen(false)}
+          >
+            <span className="font-medium text-xl">Close</span>
+            <X size={32} />
+          </button>
+          
+          <div className="flex flex-col items-center space-y-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block text-white hover:text-[#dbf72c] transition-colors font-medium py-2"
+                className="text-white hover:text-[#dbf72c] transition-colors font-medium text-4xl"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -97,7 +106,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/quote"
-              className="block bg-[#dbf72c] text-[#0c0f17] px-6 py-3 rounded-full text-center font-semibold"
+              className="bg-[#dbf72c] text-[#0c0f17] px-8 py-4 rounded-full text-center font-semibold text-2xl hover:shadow-lg hover:shadow-[#dbf72c]/50 transition-all duration-300 mt-4"
               onClick={() => setIsOpen(false)}
             >
               Get a Quote

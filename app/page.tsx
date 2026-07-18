@@ -1,6 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Code, Smartphone, Share2, Target, Palette, Printer, ArrowRight, Globe, Zap, Users } from 'lucide-react';
-import HeroVideo from '@/components/HeroVideo';
 
 export default function Home() {
   const services = [
@@ -52,7 +52,14 @@ export default function Home() {
     <div className="min-h-screen bg-[#0c0f17]">
       <section className="relative bg-[#0c0f17] text-white overflow-hidden min-h-screen">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <HeroVideo playbackId="gUEDogsuS802LfA74yM3eJSdHqKLVWVYAhXcQYenx00t8" />
+          <Image
+            src="/hero-section-magic.jpg"
+            alt="LYNKS hero background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
         

@@ -146,8 +146,8 @@ Copyright © 2026 LYNKS. All rights reserved.
 ## 📞 Support
 
 For questions or support, contact:
-- Email: hello@lynks.com
-- Phone: +1 (234) 567-890
+- Email: support@wearelynks.com
+- Phone: +44 7624 000000
 
 ---
 

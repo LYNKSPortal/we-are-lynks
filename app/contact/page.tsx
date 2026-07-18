@@ -29,14 +29,14 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'hello@lynks.com',
-      link: 'mailto:hello@lynks.com',
+      details: 'support@wearelynks.com',
+      link: 'mailto:support@wearelynks.com',
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (234) 567-890',
-      link: 'tel:+1234567890',
+      details: '+44 7624 000000',
+      link: 'tel:+447624000000',
     },
     {
       icon: MapPin,
