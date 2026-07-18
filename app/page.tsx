@@ -107,7 +107,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#0c0f17]">
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
         <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
