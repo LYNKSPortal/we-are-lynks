@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Script from 'next/script';
 import { Star } from 'lucide-react';
 
@@ -45,37 +46,65 @@ export default function TrustpilotWidget({
       },
     ];
 
+    function truncateWords(text: string, maxWords: number) {
+      const words = text.trim().split(/\s+/);
+      if (words.length <= maxWords) return text;
+      return words.slice(0, maxWords).join(' ') + '...';
+    }
+
+    function ReviewCard({ review }: { review: typeof reviews[number] }) {
+      const [expanded, setExpanded] = useState(false);
+      const wordCount = review.body.trim().split(/\s+/).length;
+      const isLong = wordCount > 100;
+      const displayText = expanded || !isLong ? review.body : truncateWords(review.body, 100);
+
+      return (
+        <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-lg flex flex-col">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white font-bold text-sm">
+              {review.initials}
+            </div>
+            <div>
+              <h3 className="text-white font-semibold">{review.name}</h3>
+              <p className="text-sm text-gray-400">{review.meta}</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-1 mb-3" aria-label="Rated 5 out of 5 stars">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star
+                key={i}
+                className="w-5 h-5 fill-[#00b67a] text-[#00b67a]"
+              />
+            ))}
+          </div>
+
+          <h4 className="text-lg font-bold text-white mb-2">
+            {review.title}
+          </h4>
+
+          <p className="text-gray-300 leading-relaxed whitespace-pre-line flex-grow">
+            {displayText}
+          </p>
+
+          {isLong && (
+            <button
+              type="button"
+              onClick={() => setExpanded(!expanded)}
+              className="mt-4 text-left text-[#dbf72c] font-medium hover:underline focus:outline-none"
+            >
+              {expanded ? 'Show less' : 'Read more'}
+            </button>
+          )}
+        </div>
+      );
+    }
+
     return (
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           {reviews.map((review, index) => (
-            <div key={index} className="bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-lg">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white font-bold text-sm">
-                  {review.initials}
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold">{review.name}</h3>
-                  <p className="text-sm text-gray-400">{review.meta}</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-1 mb-3" aria-label="Rated 5 out of 5 stars">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-[#00b67a] text-[#00b67a]"
-                  />
-                ))}
-              </div>
-
-              <h4 className="text-lg font-bold text-white mb-2">
-                {review.title}
-              </h4>
-              <p className="text-gray-300 leading-relaxed whitespace-pre-line">
-                {review.body}
-              </p>
-            </div>
+            <ReviewCard key={index} review={review} />
           ))}
         </div>
 
