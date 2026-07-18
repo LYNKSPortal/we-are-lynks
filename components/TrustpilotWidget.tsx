@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Script from 'next/script';
 import { Star } from 'lucide-react';
 
@@ -115,16 +116,23 @@ export default function TrustpilotWidget({
           ))}
         </div>
 
-        <p className="text-center text-sm mt-8">
+        <div className="text-center mt-8 flex flex-col items-center gap-4">
           <a
             href="https://www.trustpilot.com/review/wearelynks.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-[#dbf72c] hover:underline font-medium"
+            className="text-gray-400 hover:text-[#dbf72c] hover:underline font-medium text-sm"
           >
             View on Trustpilot
           </a>
-        </p>
+          <Image
+            src="/trust-pilot-logo.png"
+            alt="Trustpilot"
+            width={1000}
+            height={246}
+            className="h-10 w-auto opacity-80"
+          />
+        </div>
       </div>
     );
   }
