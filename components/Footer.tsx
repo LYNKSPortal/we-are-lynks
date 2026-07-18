@@ -153,7 +153,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-gray-800 mt-8 pt-8 px-4 sm:px-6 lg:px-8 pb-8">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-          <p>&copy; {currentYear} LYNKS. All rights reserved.</p>
+          <p>&copy; {currentYear} We Are LYNKS. All rights reserved.</p>
           <div className="flex items-center gap-2 text-white font-medium">
             <span>Proud Manx Business</span>
             <Image
