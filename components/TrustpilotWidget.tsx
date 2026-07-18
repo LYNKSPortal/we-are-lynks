@@ -108,8 +108,15 @@ export default function TrustpilotWidget({
           ))}
         </div>
 
-        <p className="text-center text-gray-500 text-sm mt-8">
-          Live Trustpilot feed will appear here once the Business Unit ID is configured.
+        <p className="text-center text-sm mt-8">
+          <a
+            href="https://www.trustpilot.com/review/wearelynks.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#dbf72c] hover:underline font-medium"
+          >
+            View on Trustpilot
+          </a>
         </p>
       </div>
     );
