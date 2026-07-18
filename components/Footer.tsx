@@ -143,7 +143,7 @@ export default function Footer() {
               alt="Calendly"
               width={3000}
               height={725}
-              className="w-[200px] h-auto mb-4"
+              className="w-[200px] h-auto mb-4 mx-auto"
             />
             <p className="text-sm text-gray-400 mb-4">
               If you would like to book a meeting or would like to request a call back, please click below
