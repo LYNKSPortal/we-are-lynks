@@ -24,9 +24,9 @@ export default function TrustpilotWidget({
   if (!businessUnitId) {
     const reviews = [
       {
-        initials: 'CI',
-        name: 'Cinnamon Indian Restaurant',
-        meta: 'IM • 1 review • May 29, 2026',
+        initials: 'NY',
+        name: 'Nadeem Younus',
+        meta: '(Cinnamon Indian Restaurant)',
         title: 'We love working with these guys!',
         body: 'We love working with these guys, they’ve helped us so much with our menus our website and done a few photoshoots for us! Whenever we’ve had issues, they’ve always come running to help us. 5 Stars!',
       },
