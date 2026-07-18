@@ -113,7 +113,7 @@ export default function TrustpilotWidget({
             href="https://www.trustpilot.com/review/wearelynks.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#dbf72c] hover:underline font-medium"
+            className="text-gray-400 hover:text-[#dbf72c] hover:underline font-medium"
           >
             View on Trustpilot
           </a>
