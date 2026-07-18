@@ -116,7 +116,7 @@ export default function TrustpilotWidget({
           ))}
         </div>
 
-        <div className="text-center mt-8 flex flex-col items-center gap-4">
+        <div className="text-center mt-8 flex flex-col items-center gap-2">
           <a
             href="https://www.trustpilot.com/review/wearelynks.com"
             target="_blank"
