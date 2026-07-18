@@ -33,7 +33,7 @@ export default function TrustpilotWidget({
       {
         initials: 'KC',
         name: 'Kayomi Carter',
-        meta: 'GB • 3 reviews • May 29, 2026',
+        meta: '(House of Kayos)',
         title: 'I cannot recommend LYNKS highly enough',
         body: 'I cannot recommend LYNKS highly enough! From the very beginning, they took the time to understand my vision and transformed it into a brand and website that perfectly reflects what I wanted to achieve.\n\nThe team helped me develop my branding, ensuring it was professional, memorable, and truly represented my business. They then created a website that not only looks amazing but is also fully functional and tailored to all of my business needs. Every detail was considered, and nothing was too much trouble.\n\nThe customer service throughout the entire process was outstanding. The team was responsive, knowledgeable, supportive, and always willing to make adjustments to ensure everything was exactly right.\n\nSince working with LYNKS, my brand has gained much greater visibility, and I feel confident that my business now has a strong online presence that stands out from the crowd.\n\nThank you to the whole team for your hard work, creativity, and dedication. I am absolutely delighted with the results and would highly recommend LYNKS to anyone looking to elevate their brand and online presence.',
       },
