@@ -148,12 +148,14 @@ export default function Footer() {
             <p className="text-sm text-gray-400 mb-4">
               If you would like to book a meeting or would like to request a call back, please click below
             </p>
-            <Link 
-              href="/book-a-meeting"
+            <a
+              href="https://calendly.com/wearelynks-support"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-[#dbf72c] text-[#0c0f17] px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#dbf72c]/50 transition-all duration-300 text-sm"
             >
               Book Now
-            </Link>
+            </a>
           </div>
         </div>
 
