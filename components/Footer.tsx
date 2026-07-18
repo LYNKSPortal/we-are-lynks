@@ -138,6 +138,13 @@ export default function Footer() {
 
           <div>
             <h3 className="text-white font-semibold mb-4">Book a Meeting</h3>
+            <Image
+              src="/calendly-neon-logo.png"
+              alt="Calendly"
+              width={3000}
+              height={725}
+              className="w-[200px] h-auto mb-4"
+            />
             <p className="text-sm text-gray-400 mb-4">
               If you would like to book a meeting or would like to request a call back, please click below
             </p>
