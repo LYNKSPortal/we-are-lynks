@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import TrustpilotWidget from '@/components/TrustpilotWidget';
 import { Code, Smartphone, Share2, Target, Palette, Printer, ArrowRight, Globe, Zap, Users } from 'lucide-react';
 
 export default function Home() {
@@ -152,6 +153,20 @@ export default function Home() {
               <ArrowRight size={20} />
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#0c0f17]">
+        <div className="max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Trusted by Our Clients
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              See what our clients say about working with LYNKS.
+            </p>
+          </div>
+          <TrustpilotWidget businessUnitId={process.env.NEXT_PUBLIC_TRUSTPILOT_BUSINESS_UNIT_ID} />
         </div>
       </section>
 
