@@ -130,7 +130,7 @@ export default function TrustpilotWidget({
             alt="Trustpilot"
             width={1000}
             height={246}
-            className="h-10 w-auto opacity-80"
+            className="w-[300px] h-auto opacity-80"
           />
         </div>
       </div>
