@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'res.cloudinary.com',
+        hostname: 'we-are-lynks-bucket.s3.eu-north-1.amazonaws.com',
         port: '',
         pathname: '/**',
       },

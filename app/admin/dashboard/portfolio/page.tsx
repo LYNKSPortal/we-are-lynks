@@ -564,7 +564,7 @@ export default function PortfolioManagement() {
                   {uploading && (
                     <div className="flex items-center justify-center gap-2 text-[#dbf72c]">
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-[#dbf72c]"></div>
-                      <p className="text-sm">Uploading to Cloudinary...</p>
+                      <p className="text-sm">Uploading...</p>
                     </div>
                   )}
                   {formData.image_url && (

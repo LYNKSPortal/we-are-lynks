@@ -1,11 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { v2 as cloudinary } from 'cloudinary';
-
-cloudinary.config({
-  cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-});
+import { PutObjectCommand } from '@aws-sdk/client-s3';
+import { randomUUID } from 'crypto';
+import { s3Client, S3_BUCKET_NAME, getS3PublicUrl } from '@/lib/s3';
 
 export async function POST(request: NextRequest) {
   try {
@@ -19,21 +15,19 @@ export async function POST(request: NextRequest) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Upload to Cloudinary
-    const result = await new Promise((resolve, reject) => {
-      cloudinary.uploader.upload_stream(
-        {
-          folder: 'portfolio',
-          resource_type: 'image',
-        },
-        (error, result) => {
-          if (error) reject(error);
-          else resolve(result);
-        }
-      ).end(buffer);
-    });
+    const extension = file.name.split('.').pop() || 'jpg';
+    const key = `portfolio/${randomUUID()}.${extension}`;
 
-    return NextResponse.json({ secure_url: (result as any).secure_url });
+    await s3Client.send(
+      new PutObjectCommand({
+        Bucket: S3_BUCKET_NAME,
+        Key: key,
+        Body: buffer,
+        ContentType: file.type || 'application/octet-stream',
+      })
+    );
+
+    return NextResponse.json({ secure_url: getS3PublicUrl(key) });
   } catch (error) {
     console.error('Upload error:', error);
     return NextResponse.json({ error: 'Upload failed' }, { status: 500 });
