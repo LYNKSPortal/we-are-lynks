@@ -35,8 +35,8 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+44 7624 000000',
-      link: 'tel:+447624000000',
+      details: '+44 7624 217466',
+      link: 'tel:+447624217466',
     },
     {
       icon: MapPin,
