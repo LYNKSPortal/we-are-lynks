@@ -4,6 +4,7 @@ import { signIn } from 'next-auth/react';
 import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function AdminLogin() {
   const router = useRouter();
@@ -69,9 +70,14 @@ export default function AdminLogin() {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-2">
-                Password
-              </label>
+              <div className="flex items-center justify-between mb-2">
+                <label htmlFor="password" className="block text-sm font-medium text-gray-300">
+                  Password
+                </label>
+                <Link href="/admin/forgot-password" className="text-sm text-gray-400 hover:text-[#dbf72c] transition-colors">
+                  Forgot password?
+                </Link>
+              </div>
               <input
                 id="password"
                 type="password"

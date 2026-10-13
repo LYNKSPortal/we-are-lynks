@@ -1,6 +1,7 @@
 import type { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
+import { neonSql } from "./neon";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -15,40 +16,23 @@ export const authOptions: NextAuthOptions = {
           return null;
         }
 
-        // Check against environment variables
-        const adminUsername = process.env.ADMIN_USERNAME;
-        const adminPasswordHashRaw = process.env.ADMIN_PASSWORD_HASH;
-        
-        // Normalize and reconstruct the full bcrypt hash (allows the env var to include or omit $ signs)
-        const normalizedHash = adminPasswordHashRaw ? adminPasswordHashRaw.replace(/\$/g, '') : '';
-        const adminPasswordHash = normalizedHash ? `$${normalizedHash.slice(0, 2)}$${normalizedHash.slice(2, 4)}$${normalizedHash.slice(4)}` : null;
+        const admins = await neonSql<{ id: number; username: string; email: string; password_hash: string }>`
+          SELECT id, username, email, password_hash FROM admin_users WHERE username = ${credentials.username}
+        `;
+        const admin = admins[0];
 
-        console.log('Auth attempt:', {
-          providedUsername: credentials.username,
-          expectedUsername: adminUsername,
-          hasHash: !!adminPasswordHash,
-          passwordLength: credentials.password.length,
-          hashLength: adminPasswordHash?.length,
-        });
-
-        if (!adminUsername || !adminPasswordHash) {
-          console.error("Admin credentials not configured");
+        if (!admin) {
           return null;
         }
 
-        if (credentials.username === adminUsername) {
-          console.log('Testing password:', credentials.password);
-          console.log('Against hash:', adminPasswordHash);
-          const isValid = await bcrypt.compare(credentials.password, adminPasswordHash);
-          console.log('Password valid:', isValid);
-          
-          if (isValid) {
-            return {
-              id: "1",
-              name: adminUsername,
-              email: adminUsername,
-            };
-          }
+        const isValid = await bcrypt.compare(credentials.password, admin.password_hash);
+
+        if (isValid) {
+          return {
+            id: String(admin.id),
+            name: admin.username,
+            email: admin.email,
+          };
         }
 
         return null;
