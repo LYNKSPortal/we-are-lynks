@@ -3,7 +3,7 @@
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Users, Mail, FileText, LogOut, LayoutDashboard, Briefcase } from 'lucide-react';
+import { Users, Mail, FileText, LogOut, LayoutDashboard, Briefcase, Calendar } from 'lucide-react';
 import { useEffect } from 'react';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -54,6 +54,13 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           >
             <Mail size={20} />
             <span>Newsletter</span>
+          </Link>
+          <Link
+            href="/admin/dashboard/meetings"
+            className="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-[#dbf72c] transition-colors"
+          >
+            <Calendar size={20} />
+            <span>Meetings</span>
           </Link>
           <Link
             href="/admin/dashboard/contacts"

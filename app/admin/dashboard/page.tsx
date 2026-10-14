@@ -1,33 +1,42 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Users, Mail, FileText } from 'lucide-react';
+import { Users, Mail, FileText, Calendar } from 'lucide-react';
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState({
     newsletter: 0,
     contacts: 0,
     quotes: 0,
+    meetings: 0,
   });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchStats() {
       try {
-        const [newsletterRes, contactsRes, quotesRes] = await Promise.all([
+        const [newsletterRes, contactsRes, quotesRes, meetingsRes] = await Promise.all([
           fetch('/api/admin/newsletter'),
           fetch('/api/admin/contacts'),
           fetch('/api/admin/quotes'),
+          fetch('/api/admin/meetings'),
         ]);
 
         const newsletter = await newsletterRes.json();
         const contacts = await contactsRes.json();
         const quotes = await quotesRes.json();
+        const meetings = await meetingsRes.json();
+
+        const today = new Date().toISOString().slice(0, 10);
+        const upcomingMeetings = (meetings.data || []).filter(
+          (m: { preferred_date: string }) => m.preferred_date?.slice(0, 10) >= today
+        );
 
         setStats({
           newsletter: newsletter.data?.length || 0,
           contacts: contacts.data?.length || 0,
           quotes: quotes.data?.length || 0,
+          meetings: upcomingMeetings.length,
         });
       } catch (error) {
         console.error('Error fetching stats:', error);
@@ -61,6 +70,13 @@ export default function AdminDashboard() {
       color: 'text-purple-400',
       bgColor: 'bg-purple-400/10',
     },
+    {
+      title: 'Upcoming Meetings',
+      count: stats.meetings,
+      icon: Calendar,
+      color: 'text-[#dbf72c]',
+      bgColor: 'bg-[#dbf72c]/10',
+    },
   ];
 
   return (
@@ -73,7 +89,7 @@ export default function AdminDashboard() {
       {loading ? (
         <div className="text-white">Loading statistics...</div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card) => (
             <div
               key={card.title}
