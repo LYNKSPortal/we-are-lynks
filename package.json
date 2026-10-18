@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1123.0",
+    "@aws-sdk/rds-signer": "^3.1123.0",
     "@aws-sdk/s3-request-presigner": "^3.1123.0",
     "@mux/mux-node": "^12.8.1",
     "@mux/mux-player-react": "^3.11.7",
@@ -21,12 +22,15 @@
     "lucide-react": "^1.7.0",
     "next": "16.2.2",
     "next-auth": "^4.24.13",
+    "pg": "^8.23.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "resend": "^6.32.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
