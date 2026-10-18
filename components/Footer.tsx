@@ -182,6 +182,9 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+        <p className="text-xs text-gray-500 text-center mt-6">
+          We Are LYNKS is a trading name of YELLOWBUSH LIMITED, a company incorporated in the Isle of Man under the Companies Acts 1931&ndash;2004 (Company No. 132894C). Registered Office: Unit 02, Hills Meadow Industrial Estate, Peel Road, Douglas, IM1 5EA, Isle of Man.
+        </p>
       </div>
     </footer>
   );
