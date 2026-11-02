@@ -3,7 +3,7 @@
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle, Code, Smartphone, Share2, Target, Camera, Video, Palette, Printer } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Code, Smartphone, Share2, Target, Camera, Video, Palette, Printer, Search } from 'lucide-react';
 
 export default function ServicePage() {
   const params = useParams();
@@ -172,6 +172,47 @@ export default function ServicePage() {
         'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
         'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop',
+      ],
+    },
+    'seo': {
+      icon: Search,
+      title: 'SEO',
+      tagline: 'Boost your organic visibility and drive sustainable growth',
+      description: 'Data-driven SEO strategies that improve your search rankings, increase organic traffic, and generate qualified leads for your business.',
+      image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=1600&h=900&fit=crop',
+      overview: 'Search engine optimization is a long-term investment in your business\'s visibility. Our SEO services combine technical expertise, content strategy, and industry best practices to help your website rank higher and attract the right audience.',
+      approach: 'We start with a comprehensive audit of your site and competitors, then build a tailored strategy covering technical, on-page, and off-page SEO. Every recommendation is backed by data, and we report on progress transparently every step of the way.',
+      technologies: ['Google Search Console', 'SEMrush', 'Ahrefs', 'Google Analytics', 'Screaming Frog'],
+      features: [
+        'Technical SEO audits',
+        'Keyword research & strategy',
+        'On-page optimization',
+        'Content optimization',
+        'Link building',
+        'Local SEO & Google Business Profile',
+        'Competitor analysis',
+        'SEO reporting & analytics',
+      ],
+      benefits: [
+        'Increased organic traffic',
+        'Higher search rankings',
+        'Better quality leads',
+        'Improved site usability',
+        'Long-term, sustainable growth',
+        'Stronger brand credibility',
+      ],
+      process: [
+        { step: 'Audit', description: 'Analyzing your site\'s technical health and current rankings' },
+        { step: 'Research', description: 'Identifying target keywords and competitor opportunities' },
+        { step: 'Strategy', description: 'Building a tailored SEO roadmap for your business' },
+        { step: 'Optimization', description: 'Implementing on-page and technical improvements' },
+        { step: 'Content & Links', description: 'Creating content and earning quality backlinks' },
+        { step: 'Reporting', description: 'Tracking rankings, traffic, and ROI over time' },
+      ],
+      gallery: [
+        'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=800&h=600&fit=crop',
+        'https://images.unsplash.com/photo-1571677246347-5040036b95cc?w=800&h=600&fit=crop',
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
       ],
     },
     'design': {

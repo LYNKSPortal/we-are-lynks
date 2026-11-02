@@ -1,4 +1,4 @@
-import { Code, Smartphone, Share2, Target, Camera, Video, CheckCircle, ArrowRight, Palette, Printer } from 'lucide-react';
+import { Code, Smartphone, Share2, Target, Camera, Video, CheckCircle, ArrowRight, Palette, Printer, Search } from 'lucide-react';
 import Link from 'next/link';
 import HeroVideo from '@/components/HeroVideo';
 
@@ -63,6 +63,21 @@ export default function Services() {
         'Campaign analytics & reporting',
       ],
       technologies: ['Google Ads', 'Meta Ads', 'LinkedIn Ads', 'Analytics'],
+    },
+    {
+      id: 'seo',
+      icon: Search,
+      title: 'SEO',
+      description: 'Boost your organic visibility and rankings with data-driven SEO strategies that drive sustainable, long-term traffic growth.',
+      features: [
+        'Technical SEO audits',
+        'Keyword research & strategy',
+        'On-page optimization',
+        'Content optimization',
+        'Link building',
+        'Local SEO & Google Business Profile',
+      ],
+      technologies: ['Google Search Console', 'SEMrush', 'Ahrefs', 'Google Analytics'],
     },
     {
       id: 'design',
