@@ -26,7 +26,8 @@ export default function TrustpilotWidget({
     const reviews = [
       {
         initials: 'WS',
-        name: 'WSP',
+        name: 'Philip Littlejohns',
+        meta: '(Western Swimming Pools)',
         title: 'Exceeded expectations',
         body: 'Understood our needs, delivered exactly what we were looking for and, in fact, exceeded expectations. Would highly recommend!',
       },
@@ -45,14 +46,16 @@ export default function TrustpilotWidget({
         body: `I can’t recommend these guys highly enough. They have been absolutely amazing in helping me set up my coaching business, supporting me with everything from website and IT issues to marketing and all the countless little things that come with starting a business.\n\nTheir knowledge, patience, and willingness to go above and beyond have made such a difference. Nothing is ever too much trouble, and they always find a solution while making everything easy to understand.\n\nNot only are they incredibly skilled, but they’re also genuinely supportive and invested in helping others succeed. I’m so grateful for all their help and would highly recommend them to anyone looking for someone reliable, knowledgeable, and a pleasure to work with.`,
       },
       {
-        initials: 'C',
-        name: 'Christos',
+        initials: 'CL',
+        name: 'Christos Loizidies',
+        meta: '(University of Chester)',
         title: 'Uni student stuck with coding',
         body: `I'm an Economics student in Chester and was really struggling with my Econometrics module. I had no idea which software to use, STATA or something else and honestly, the coding part scared me…\n\nA friend recommended that I look at “We Are LYNKS”. They were upfront that econometrics wasn't their normal field, and we both knew that going in. But they still went through with it and managed to help me anyway. They did their research and showed me why STATA was the right choice, walked me through the code step by step, as this was what was bothering me the most, and taught me how to actually understand my data and read the results, not just stare at numbers.\n\nThe biggest relief is that they helped me turn all that into actual assignments and presentations I felt confident about. It felt like a massive hurdle I couldn't overcome, they just helped me get past it. As I'm a Uni student, they were fair on pricing too!\n\nIf you're a student stuck with code, I would seriously reach out to We Are LYNKS for guidance.\n\nWould 100% recommend them, as they could have easily turned around and said, "This is not for us."\n\n5 Stars from me!`,
       },
       {
-        initials: 'C',
-        name: 'Consumer',
+        initials: 'MF',
+        name: 'Massimo Formby',
+        meta: '(Dazzler)',
         title: 'The websites are cool',
         body: 'The websites are cool, clean and sleek and make things easier to handle for busy owners managing their online presence',
       },
@@ -134,14 +137,14 @@ export default function TrustpilotWidget({
           ))}
         </div>
 
-        <div className="text-center mt-8 flex flex-col items-center gap-2">
+        <div className="text-center mt-8 flex flex-col items-center">
           <a
             href="https://www.trustpilot.com/review/wearelynks.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-[#dbf72c] hover:underline font-medium text-sm"
           >
-            View on Trustpilot
+            View On
           </a>
           <Image
             src="/trust-pilot-neon-logo.png"
