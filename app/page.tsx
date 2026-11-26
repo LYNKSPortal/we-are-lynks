@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import TrustpilotWidget from '@/components/TrustpilotWidget';
+import HeroVideo from '@/components/HeroVideo';
 import { Code, Smartphone, Share2, Target, Palette, Printer, ArrowRight, Globe, Zap, Users } from 'lucide-react';
 
 export default function Home() {
@@ -53,14 +54,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#0c0f17]">
       <section className="relative bg-[#0c0f17] text-white overflow-hidden min-h-screen">
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <Image
-            src="/hero-section-magic.jpg"
-            alt="LYNKS hero background"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
+          <HeroVideo playbackId="R02oMQdSJTEZt300TrIL00Qghn3O6S02a01dv5f5AcFt4vZA" />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
         
