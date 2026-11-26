@@ -27,9 +27,9 @@ export default function About() {
   ];
 
   const stats = [
-    { number: '50+', label: 'Countries Served' },
-    { number: '500+', label: 'Happy Clients' },
-    { number: '1000+', label: 'Projects Completed' },
+    { number: '3+', label: 'Countries Served' },
+    { number: '300+', label: 'Happy Clients' },
+    { number: '500+', label: 'Projects Completed' },
     { number: '15+', label: 'Years Experience' },
   ];
 

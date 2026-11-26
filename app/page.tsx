@@ -44,9 +44,9 @@ export default function Home() {
   ];
 
   const stats = [
-    { icon: Globe, value: '50+', label: 'Countries Served' },
-    { icon: Users, value: '500+', label: 'Happy Clients' },
-    { icon: Zap, value: '1000+', label: 'Projects Delivered' },
+    { icon: Globe, value: '3+', label: 'Countries Served' },
+    { icon: Users, value: '300+', label: 'Happy Clients' },
+    { icon: Zap, value: '500+', label: 'Projects Delivered' },
   ];
 
   return (

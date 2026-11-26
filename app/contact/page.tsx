@@ -219,7 +219,7 @@ export default function Contact() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#dbf72c] mt-1">✓</span>
-                    <span>500+ satisfied clients worldwide</span>
+                    <span>300+ satisfied clients worldwide</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-[#dbf72c] mt-1">✓</span>
